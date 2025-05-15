@@ -3,13 +3,9 @@
     "default": "mononest-web"
   },
   "targets": {
-    "mononest-jp": {
-      "hosting": {
-        "production": ["mononest-jp"]
-      }
-    },
     "mononest-web": {
       "hosting": {
+        "production": ["mononest-jp"],
         "staging": ["mononest-web"]
       }
     }

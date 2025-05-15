@@ -1,4 +1,4 @@
-name: Deploy to Firebase Hosting (staging & production)
+name: Deploy to Firebase Hosting
 
 on:
   push:
@@ -7,17 +7,18 @@ on:
       - dev
 
 jobs:
-  build-and-deploy:
+  deploy:
+    name: Deploy to Firebase
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: '18'
 
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
@@ -27,9 +28,7 @@ jobs:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         run: |
           if [ "${{ github.ref }}" = "refs/heads/main" ]; then
-            firebase deploy --only hosting:production
+            firebase deploy --only hosting:production --project mononest-web
           elif [ "${{ github.ref }}" = "refs/heads/dev" ]; then
-            firebase deploy --only hosting:staging
-          else
-            echo "Not deploying: this branch is not configured for deployment."
+            firebase deploy --only hosting:staging --project mononest-web
           fi
