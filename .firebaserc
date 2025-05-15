@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "mononest-jp"
+    "default": "mononest-web"
   },
   "targets": {
     "mononest-jp": {
