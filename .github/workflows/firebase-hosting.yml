@@ -28,6 +28,8 @@ jobs:
         run: |
           if [ "${{ github.ref }}" = "refs/heads/main" ]; then
             firebase deploy --only hosting:production
-          else
+          elif [ "${{ github.ref }}" = "refs/heads/dev" ]; then
             firebase deploy --only hosting:staging
+          else
+            echo "Not deploying: this branch is not configured for deployment."
           fi
