@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "mononest-web"
-  }
+    "default": "mononest-web",
+    "production": "mononest-web"
+  },
+  "targets": {},
+  "etags": {}
 }
