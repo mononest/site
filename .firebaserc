@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "mononest-web",
+    "production": "mononest-web"
+  },
+  "targets": {
+    "mononest-web": {
+      "hosting": {
+        "production": [
+          "mononest-web"
+        ]
+      }
+    }
+  }
+}
