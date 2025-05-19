@@ -6,39 +6,39 @@ export default function TestimonialsCarousel() {
   const testimonials = [
     {
       img: '/images/testimonial-01.png',
-      name: 'Alice Carter',
-      username: '@alice_in_tech',
-      date: 'June 23, 2028',
+      name: '折りたたみバスケット',
+      username: 'これは表示用のサンプル商品です。',
+      date: 'グレー／ホワイト 45×30×25cm',
       content:
-        'This platform has completely transformed the way I approach my projects. The clean design and robust tools make everything so much easier!',
-      channel: 'Twitter',
+        '通気性抜群で洗濯物もすっきり。使わない時はコンパクトに折り畳み可能。',
+      channel: 'Amazon ',
     },
     {
       img: '/images/testimonial-02.png',
-      name: 'Dylan Harper',
-      username: '@dharper_99',
-      date: 'July 8, 2028',
+      name: '木製カトラリーセット',
+      username: 'これは表示用のサンプル商品です。',
+      date: 'ブナ材（無塗装）',
       content:
-        "I've never come across something so intuitive and efficient. It feels like it was made specifically for my workflow!",
-      channel: 'Twitter',
+        "自然な風合いと滑らかな手触り。日常使いにも、おもてなしにも最適。",
+      channel: 'Amazon',
     },
     {
       img: '/images/testimonial-03.png',
-      name: 'Sophia Nguyen',
-      username: '@soph_nguy',
-      date: 'August 14, 2028',
+      name: 'ソープホルダー',
+      username: 'これは表示用のサンプル商品です。',
+      date: '取付方法：両面テープ or 吸盤',
       content:
-        'Absolutely love using this tool. The features are unmatched, and it has boosted my productivity tenfold. Highly recommend it to anyone!',
-      channel: 'Twitter',
+        'マグネット式で壁にぴたっと。水切れ良く、石鹸長持ち。',
+      channel: 'Amazon',
     },
     {
       img: '/images/testimonial-04.png',
-      name: 'Liam Garcia',
-      username: '@liam.codes',
-      date: 'September 3, 2028',
+      name: 'マットブラックマグカップ',
+      username: 'これは表示用のサンプル商品です。',
+      date: '容量：300ml',
       content:
-        "This app has set a new standard for user experience. It’s sleek, fast, and incredibly effective. I'm beyond impressed!",
-      channel: 'Twitter',
+        "耐熱・耐久性に優れたセラミック。指紋がつきにくく、落ち着いた質感。",
+      channel: 'Amazon',
     },
   ];
 
@@ -59,7 +59,7 @@ export default function TestimonialsCarousel() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold md:text-4xl">
-              Top startups love Simple
+              暮らしに寄り添う、MONONESTの人気商品
             </h2>
           </div>
         </div>
