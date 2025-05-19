@@ -31,4 +31,6 @@ jobs:
       - name: Deploy to Firebase Hosting and Functions
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_RECEIVER_EMAIL: ${{ secrets.RESEND_RECEIVER_EMAIL }}
         run: firebase deploy --only hosting,functions

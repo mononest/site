@@ -1,12 +1,12 @@
 {
-  "name": "saas-next",
+  "name": "mononest-site",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@types/node": "^20.10.4",
@@ -24,9 +24,11 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "@eslint/js": "^9.27.0",
     "@tailwindcss/forms": "^0.5.7",
     "@types/aos": "^3.0.7",
     "autoprefixer": "^10.4.16",
+    "eslint": "^9.27.0",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.3.6"
   }
