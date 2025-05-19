@@ -1,9 +1,34 @@
+# macOS
 .DS_Store
+
+# Node.js dependencies
 node_modules/
+
+# Next.js build output
 .next/
 out/
-.env*
-*.log
-.vscode/
-*.tsbuildinfo
+build/
+
+# Firebase functions dependencies & build cache
+functions/node_modules/
+functions/lib/
+functions/.firebase/
+
+# Firebase CLI deploy artifacts
+.firebase/
+.firebaserc
 firebase-debug.log*
+
+# Environment variables and secrets
+.env*
+*.pem
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Logs
+*.log
+
+# Editor folders
+.vscode/
