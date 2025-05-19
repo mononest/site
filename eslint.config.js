@@ -1,5 +1,5 @@
 module.exports = {
-  ignorePatterns: [
+  ignores: [
     'next.config.js',
     'tailwind.config.js',
     'postcss.config.js',

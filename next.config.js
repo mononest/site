@@ -1,7 +1,10 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: "export", // 如果你使用静态导出
+  output: "export",
+  env: {
+    RESEND_API_KEY: process.env.RESEND_API_KEY,
+    RESEND_RECEIVER_EMAIL: process.env.RESEND_RECEIVER_EMAIL,
+  },
 };
 
 module.exports = nextConfig;
