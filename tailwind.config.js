@@ -7,8 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        roboto: ['var(--font-roboto)', 'sans-serif'],
-        sans: ['var(--font-montserrat)', 'sans-serif'],
+        sans: ['system-ui', 'sans-serif'],
       },
       fontSize: {
         xs: ['0.75rem', { lineHeight: '1.5' }],
