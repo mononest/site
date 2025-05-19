@@ -1,7 +1,7 @@
-// next.config.js (ESM)
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // 其他配置...
+  output: "export", // 如果你使用静态导出
 };
 
-export default nextConfig;
+module.exports = nextConfig;
