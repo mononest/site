@@ -1,4 +1,7 @@
 import './css/style.css';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // import localFont from "next/font/local";
 // Removed Roboto and Montserrat font imports as per instructions
@@ -22,6 +25,30 @@ export default function RootLayout({
         {/* <body className={`${inter.variable} ${hkgrotesk.variable} font-inter antialiased bg-slate-100 text-gray-800 tracking-tight`}> */}
         {/* <body className="font-sans antialiased bg-slate-100 text-gray-800 tracking-tight"> */}
         <div className="flex flex-col min-h-screen overflow-hidden">
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                document.addEventListener('DOMContentLoaded', function() {
+                  AOS.init({
+                    duration: 400, // 更短的动画时间
+                    once: true,
+                    disable: function() {
+                      const isMobile = window.innerWidth < 768;
+                      if(isMobile) {
+                        // 移动端添加轻量级动画类
+                        document.body.classList.add('aos-mobile');
+                      }
+                      return isMobile;
+                    },
+                    throttleDelay: 50,
+                    // 移动端简化动画
+                    offset: 120,
+                    easing: 'ease-out',
+                  });
+                });
+              `,
+            }}
+          />
           {children}
         </div>
       </body>

@@ -5,6 +5,14 @@ export default {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    screens: {
+      xs: '480px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+    },
     extend: {
       animation: {
         'infinite-scroll': 'infinite-scroll 30s linear infinite',
@@ -17,6 +25,10 @@ export default {
       },
       fontFamily: {
         sans: ['system-ui', 'sans-serif'],
+      },
+      // 优化移动端触摸反馈
+      touchAction: {
+        'pan-y': 'pan-y',
       },
       fontSize: {
         xs: ['0.75rem', { lineHeight: '1.5' }],
