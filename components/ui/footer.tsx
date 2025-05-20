@@ -112,9 +112,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="/contact">
+                <a className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="#0">
                   お問い合わせ
-                </Link>
+                </a>
               </li>
               <li>
                 <a className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="#0">
@@ -132,7 +132,7 @@ export default function Footer() {
         {/* Bottom area */}
         <div className="flex justify-center pb-4 md:pb-8">
           <div className="text-sm text-slate-600">
-            © 2024 MONONEST. All rights reserved.
+            © 2025 MONONEST. All rights reserved.
           </div>
         </div>
       </div>

@@ -113,7 +113,7 @@ export default function SignUp() {
               className="absolute inset-0 opacity-40 bg-gradient-to-t from-transparent to-slate-200 -z-10"
               aria-hidden="true"
             />
-            <div className="p-6 md:p-8 bg-white rounded-xl">
+            <div className="p-6 md:p-8">
               <div className="font-sans text-xl font-bold mb-6 text-center" data-aos="fade-up" data-aos-delay="250">お問い合わせフォーム</div>
               {/* Form */}
               <form onSubmit={handleSubmit}>
@@ -129,7 +129,7 @@ export default function SignUp() {
                     <input
                       id="name"
                       name="name"
-                      className="form-input text-sm py-2 w-full rounded-lg"
+                      className="form-input text-sm py-2 w-full"
                       type="text"
                       required
                       value={formData.name}
@@ -147,7 +147,7 @@ export default function SignUp() {
                     <input
                       id="email"
                       name="email"
-                      className="form-input text-sm py-2 w-full rounded-lg"
+                      className="form-input text-sm py-2 w-full"
                       type="email"
                       required
                       value={formData.email}
@@ -165,7 +165,7 @@ export default function SignUp() {
                     <select
                       id="type"
                       name="type"
-                      className="form-select py-2 w-full rounded-lg"
+                      className="form-select py-2 w-full"
                       required
                       value={formData.type}
                       onChange={handleChange}
@@ -188,7 +188,7 @@ export default function SignUp() {
                     <input
                       id="company"
                       name="company"
-                      className="form-input text-sm py-2 w-full rounded-lg"
+                      className="form-input text-sm py-2 w-full"
                       type="text"
                       value={formData.company}
                       onChange={handleChange}
@@ -205,7 +205,7 @@ export default function SignUp() {
                     <input
                       id="phone"
                       name="phone"
-                      className="form-input text-sm py-2 w-full rounded-lg"
+                      className="form-input text-sm py-2 w-full"
                       type="text"
                       value={formData.phone}
                       onChange={handleChange}
@@ -222,7 +222,7 @@ export default function SignUp() {
                     <textarea
                       id="message"
                       name="message"
-                      className="form-textarea text-sm py-2 w-full rounded-lg"
+                      className="form-textarea text-sm py-2 w-full"
                       rows={4}
                       required
                       value={formData.message}
