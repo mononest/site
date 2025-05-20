@@ -21,10 +21,7 @@ export default function About() {
       <Values />
       <History />
       <Team />
-      <Cta 
-        title="MONONESTの世界へようこそ"
-        subtitle="最新情報をメールでお届けします"
-      />
+      <Cta />
     </>
   );
 }

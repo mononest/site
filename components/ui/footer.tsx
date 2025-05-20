@@ -112,7 +112,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="#0">
+                <a className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="/contact">
                   お問い合わせ
                 </a>
               </li>
