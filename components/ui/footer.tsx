@@ -24,147 +24,115 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-          {/* 2nd block */}
+          {/* 2nd block - 商品カテゴリー */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h6 className="text-xs text-slate-800 font-semibold uppercase underline mb-3">Products</h6>
+            <h6 className="text-xs text-slate-800 font-semibold uppercase underline mb-3">商品カテゴリー</h6>
             <ul className="text-sm space-y-2">
               <li>
                 <a className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="#0">
-                  Saas Manage
+                  キッチン用品
                 </a>
               </li>
               <li>
                 <a className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="#0">
-                  Saas Analyse
+                  バスルーム用品
                 </a>
               </li>
               <li>
                 <a className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="#0">
-                  Saas Launch
+                  収納アイテム
                 </a>
               </li>
               <li>
                 <a className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="#0">
-                  Experimentation
+                  新商品
                 </a>
               </li>
             </ul>
           </div>
-          {/* 3rd block */}
+          {/* 3rd block - お役立ち情報 */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h6 className="text-xs text-slate-800 font-semibold uppercase underline mb-3">Resources</h6>
+            <h6 className="text-xs text-slate-800 font-semibold uppercase underline mb-3">お役立ち情報</h6>
             <ul className="text-sm space-y-2">
               <li>
                 <a className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="#0">
-                  Blog
+                  商品の使い方
                 </a>
               </li>
               <li>
                 <a className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="#0">
-                  Cheat Sheet
+                  よくある質問
                 </a>
               </li>
               <li>
                 <a className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="#0">
-                  Channel Partners
+                  お手入れ方法
                 </a>
               </li>
               <li>
                 <a className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="#0">
-                  Affiliate Program
+                  ブログ
                 </a>
               </li>
             </ul>
           </div>
-          {/* 4th block */}
+          {/* 4th block - ブランド理念 */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h6 className="text-xs text-slate-800 font-semibold uppercase underline mb-3">Projects</h6>
+            <h6 className="text-xs text-slate-800 font-semibold uppercase underline mb-3">ブランド理念</h6>
             <ul className="text-sm space-y-2">
               <li>
                 <a className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="#0">
-                  Session Recording
+                  実用性を最優先に
                 </a>
               </li>
               <li>
                 <a className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="#0">
-                  Feature Flags
+                  高コスパなものづくり
                 </a>
               </li>
               <li>
                 <a className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="#0">
-                  Heatmaps
+                  日本基準の品質管理
                 </a>
               </li>
               <li>
                 <a className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="#0">
-                  Correlation Analysis
+                  簡素で美しい佇まい
                 </a>
               </li>
             </ul>
           </div>
-          {/* 5th block */}
+          {/* 5th block - 会社情報 */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h6 className="text-xs text-slate-800 font-semibold uppercase underline mb-3">Company</h6>
+            <h6 className="text-xs text-slate-800 font-semibold uppercase underline mb-3">会社情報</h6>
             <ul className="text-sm space-y-2">
               <li>
+                <Link className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="/aboutus">
+                  MONONESTについて
+                </Link>
+              </li>
+              <li>
+                <Link className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="/contact">
+                  お問い合わせ
+                </Link>
+              </li>
+              <li>
                 <a className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="#0">
-                  About Us
+                  採用情報
                 </a>
               </li>
               <li>
                 <a className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="#0">
-                  Our Story
-                </a>
-              </li>
-              <li>
-                <a className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="#0">
-                  Work With Us
+                  OEMパートナー募集
                 </a>
               </li>
             </ul>
           </div>
         </div>
         {/* Bottom area */}
-        <div className="md:flex md:items-center md:justify-between pb-4 md:pb-8">
-          {/* Social links */}
-          <ul className="flex mb-4 md:order-1 md:ml-4 md:mb-0">
-            <li>
-              <a
-                className="flex justify-center items-center text-indigo-500 hover:text-slate-500 transition duration-150 ease-in-out"
-                href="#0"
-                aria-label="Twitter"
-              >
-                <svg className="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                  <path d="m13.063 9 3.495 4.475L20.601 9h2.454l-5.359 5.931L24 23h-4.938l-3.866-4.893L10.771 23H8.316l5.735-6.342L8 9h5.063Zm-.74 1.347h-1.457l8.875 11.232h1.36l-8.778-11.232Z" />
-                </svg>
-              </a>
-            </li>
-            <li className="ml-2">
-              <a
-                className="flex justify-center items-center text-indigo-500 hover:text-slate-500 transition duration-150 ease-in-out"
-                href="#0"
-                aria-label="Medium"
-              >
-                <svg className="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M23 8H9a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1Zm-1.708 3.791-.858.823a.251.251 0 0 0-.1.241V18.9a.251.251 0 0 0 .1.241l.838.823v.181h-4.215v-.181l.868-.843c.085-.085.085-.11.085-.241v-4.887l-2.41 6.131h-.329l-2.81-6.13V18.1a.567.567 0 0 0 .156.472l1.129 1.37v.181h-3.2v-.181l1.129-1.37a.547.547 0 0 0 .146-.472v-4.749a.416.416 0 0 0-.138-.351l-1-1.209v-.181H13.8l2.4 5.283 2.122-5.283h2.971l-.001.181Z" />
-                </svg>
-              </a>
-            </li>
-            <li className="ml-2">
-              <a
-                className="flex justify-center items-center text-indigo-500 hover:text-slate-500 transition duration-150 ease-in-out"
-                href="#0"
-                aria-label="Github"
-              >
-                <svg className="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16 8.2c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4V22c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3s1.4.1 2 .3c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.7 3.9.3.4.6.9.6 1.6v2.2c0 .2.1.5.6.4 3.2-1.1 5.5-4.1 5.5-7.6-.1-4.4-3.7-8-8.1-8z" />
-                </svg>
-              </a>
-            </li>
-          </ul>
-          {/* Links */}
+        <div className="flex justify-center pb-4 md:pb-8">
           <div className="text-sm text-slate-600">
-            <a className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="#0">Terms</a> · <a className="text-slate-800 hover:text-slate-500 transition duration-150 ease-in-out" href="#0">Privacy Policy</a>
+            © 2024 MONONEST. All rights reserved.
           </div>
         </div>
       </div>

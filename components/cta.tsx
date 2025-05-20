@@ -2,7 +2,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Illustration from '@/public/images/cta-illustration.svg'
 
-export default function Cta() {
+interface CtaProps {
+  title?: string;
+  subtitle?: string;
+}
+
+export default function Cta({ title, subtitle }: CtaProps) {
   return (
     <section className="relative border-t border-slate-300">
       {/* Bg gradient: top */}
@@ -18,22 +23,14 @@ export default function Cta() {
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20" data-aos="fade-up">
-            <h2 className="h2 font-sans">Únase a la plataforma centrada en el usuario más flexible para equiposs</h2>
+            <h2 className="h2 font-sans">{title || <><span className="relative inline-flex h2 bg-clip-text text-transparent bg-gradient-to-tr from-indigo-600 via-indigo-400 to-indigo-200 pb-6">MONONEST</span>の生活道具で、毎日をもっと快適に</>}</h2>
+            {subtitle && <p className="text-xl text-slate-500 mt-4">{subtitle}</p>}
           </div>
-          {/* Buttons */}
-          <div className="text-center">
-            <div className="max-w-xs mx-auto sm:max-w-none sm:inline-flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <div data-aos="fade-up" data-aos-delay="100">
-                <Link className="btn text-white bg-indigo-500 hover:bg-indigo-600 w-full shadow-sm group" href="/signup">
-                  Get Started Free
-                </Link>
-              </div>
-              <div data-aos="fade-up" data-aos-delay="200">
-                <a className="btn text-slate-300 bg-slate-700 hover:bg-slate-600 border-slate-600 w-full shadow-sm" href="#0">
-                  Read Docs
-                </a>
-              </div>
-            </div>
+          {/* Button */}
+          <div className="text-center" data-aos="fade-up">
+            <Link className="btn text-white bg-indigo-500 hover:bg-indigo-600 w-full sm:w-auto shadow-sm group" href="/contact">
+              お問い合わせ
+            </Link>
           </div>
         </div>
       </div>

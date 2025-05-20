@@ -51,9 +51,14 @@ export default function Features() {
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 font-sans mb-4">4つのものづくり基準</h2>
+            <h2 className="h2 font-sans mb-4" data-aos="fade-up">
+              <span className="relative inline-flex bg-clip-text text-transparent bg-gradient-to-tr from-indigo-600 via-indigo-400 to-indigo-200 pb-6">
+                4つの
+              </span>
+              ものづくり基準
+            </h2>
             <div className="max-w-2xl mx-auto">
-              <p className="text-xl text-slate-500">
+              <p className="text-xl text-slate-500" data-aos="fade-up" data-aos-delay="100">
               実用性を第一に、日常で本当に役立つものを。<br/>
               日本品質の基準で選び抜き、価格と美しさのバランスを追求しています。
               </p>
@@ -64,7 +69,9 @@ export default function Features() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="h-auto flex flex-col bg-slate-200 p-6 rounded drop-shadow-md items-center text-center"
+                className="h-auto flex flex-col bg-gradient-to-r from-slate-200 via-slate-100 to-white p-6 rounded drop-shadow-md items-center text-center"
+                data-aos="fade-up"
+                data-aos-delay={150 + index * 50}
               >
                 <Image
                   className="mb-3"

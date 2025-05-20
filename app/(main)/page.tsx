@@ -5,23 +5,34 @@ export const metadata = {
 };
 
 import Hero from '@/components/hero';
-import Testimonials from '@/components/testimonials';
+import ProductShowcase from '@/components/product-showcase';
 import Features from '@/components/features';
-import Features02 from '@/components/features-02';
-import FaeturedProjects from '@/components/featured-projects';
+import Shops from '@/components/shops';
 import Faqs from '@/components/faqs';
 import Cta from '@/components/cta';
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      <Testimonials />
-      <Features />
-      <Features02 />
-      <FaeturedProjects />
-      <Faqs />
-      <Cta />
+      <Hero 
+        title={<>選び方にこたえがある <span className="relative inline-flex h1 bg-clip-text text-transparent bg-gradient-to-tr from-indigo-400 via-indigo-300 to-indigo-200 pb-6">MONO</span></>}
+        subtitle="ものを選ぶことは、暮らし方を選ぶこと。\n気づかないくらいのちょうど良さを、MONOに込めています。"
+      />
+      <div className="py-16 md:py-20">
+        <ProductShowcase />
+      </div>
+      <div className="py-16 md:py-20">
+        <Features />
+      </div>
+      <div className="py-16 md:py-20">
+        <Shops />
+      </div>
+      <div className="py-16 md:py-20">
+        <Faqs />
+      </div>
+      <div className="py-16 md:py-20">
+        <Cta />
+      </div>
     </>
   );
 }
