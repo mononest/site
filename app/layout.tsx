@@ -7,8 +7,8 @@ import 'aos/dist/aos.css';
 // Removed Roboto and Montserrat font imports as per instructions
 
 export const metadata = {
-  title: 'MONONEST',
-  description: 'MONONEST（モノネスト）は、実用性と美しさを両立した生活道具ブランドです。',
+  title: 'MONONEST - 生活道具ブランド',
+  description: '実用性と美しさを兼ね備えた生活道具を提供するMONONESTの公式サイトです。',
   keywords: 'MONONEST, モノネスト, 日用品, ライフスタイル, シンプルな暮らし, デザイン雑貨, 日本品質, 実用的な道具, 高品質生活用品, こだわりのモノ, 暮らしの美学, 実用性重視, 使いやすい, ミニマルデザイン, 家具・雑貨, 生活を整える, 選び抜かれた道具'
 };
 

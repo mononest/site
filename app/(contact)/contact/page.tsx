@@ -1,69 +1,25 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import ContactForm from './contact-form';
 
 export default function ContactPage() {
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    type: '',
-    company: '',
-    phone: '',
-    message: '',
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setError(null);
-    try {
-      // 確実に type と phone を含めて送信
-      const submitData = {
-        name: formData.name,
-        email: formData.email,
-        type: formData.type,
-        company: formData.company,
-        phone: formData.phone,
-        message: formData.message,
-      };
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(submitData),
-      });
-
-      const data = await res.json();
-
-      if (res.ok) {
-        setSubmitted(true);
-        setFormData({
-          name: '',
-          email: '',
-          type: '',
-          company: '',
-          phone: '',
-          message: '',
-        });
-      } else {
-        console.error('送信に失敗しました:', data.error);
-        setError(data.error || '送信に失敗しました。しばらく経ってからもう一度お試しください。');
-        setSubmitted(false);
-      }
-    } catch (err) {
-      console.error('送信時にエラーが発生しました:', err);
-      setError('送信時にエラーが発生しました。インターネット接続をご確認ください。');
-      setSubmitted(false);
-    }
-  };
+  // 在组件挂载后初始化 AOS
+  useEffect(() => {
+    AOS.init({
+      once: true, // 只执行一次动画
+      disable: 'phone', // 在手机上禁用动画，可选
+      duration: 600, // 动画持续时间
+      easing: 'ease-out-cubic', // 动画缓动函数
+    });
+    // 可选：如果页面内容动态变化，可能需要调用 AOS.refresh()
+    // AOS.refresh();
+  }, []); // 空数组作为依赖，确保只在组件挂载时运行一次
 
   return (
-    <div className="relative max-w-6xl mx-auto px-4 sm:px-6" key={Date.now()}>
+    <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
       <div className="pt-32 pb-12 md:pt-40 md:pb-20">
         <div className="lg:flex lg:space-x-20 justify-center">
           {/* Left side */}
@@ -107,147 +63,7 @@ export default function ContactPage() {
             </ul>
           </div>
           {/* Right side */}
-          <div className="relative w-full max-w-md mx-auto">
-            {/* Bg gradient */}
-            <div
-              className="absolute inset-0 opacity-90 bg-gradient-to-br from-indigo-50 via-indigo-100 to-indigo-200 -z-10 rounded-xl"
-              aria-hidden="true"
-            />
-            <div className="p-6 md:p-8">
-              <div className="font-sans text-xl font-bold mb-6 text-center" data-aos="fade-up" data-aos-delay="250">お問い合わせフォーム</div>
-              {/* Form */}
-              <form onSubmit={handleSubmit}>
-                <div className="space-y-4">
-                  {/* お名前（name）※必須 */}
-                  <div data-aos="fade-up" data-aos-delay="300">
-                    <label
-                      className="block text-sm text-slate-800 font-medium mb-1"
-                      htmlFor="name"
-                    >
-                      お名前 <span className="text-rose-500">*</span>
-                    </label>
-                    <input
-                      id="name"
-                      name="name"
-                      className="form-input text-sm py-2 w-full rounded-lg"
-                      type="text"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  {/* メールアドレス（email）※必須 */}
-                  <div data-aos="fade-up" data-aos-delay="350">
-                    <label
-                      className="block text-sm text-slate-800 font-medium mb-1"
-                      htmlFor="email"
-                    >
-                      メールアドレス <span className="text-rose-500">*</span>
-                    </label>
-                    <input
-                      id="email"
-                      name="email"
-                      className="form-input text-sm py-2 w-full rounded-lg"
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  {/* ご用件（type select）※任意 */}
-                  <div data-aos="fade-up" data-aos-delay="400">
-                    <label
-                      className="block text-sm text-slate-800 font-medium mb-1"
-                      htmlFor="type"
-                    >
-                      ご用件 <span className="text-rose-500">*</span>
-                    </label>
-                    <select
-                      id="type"
-                      name="type"
-                      className="form-select py-2 w-full"
-                      required
-                      value={formData.type}
-                      onChange={handleChange}
-                    >
-                      <option value="">選択してください</option>
-                      <option value="商品についての質問">商品についての質問</option>
-                      <option value="購入後のサポート">購入後のサポート</option>
-                      <option value="OEM・業務提携の相談">OEM・業務提携の相談</option>
-                      <option value="その他のお問い合わせ">その他のお問い合わせ</option>
-                    </select>
-                  </div>
-                  {/* 会社名（company）※任意 */}
-                  <div data-aos="fade-up" data-aos-delay="450">
-                    <label
-                      className="block text-sm text-slate-800 font-medium mb-1"
-                      htmlFor="company"
-                    >
-                      会社名
-                    </label>
-                    <input
-                      id="company"
-                      name="company"
-                      className="form-input text-sm py-2 w-full rounded-lg"
-                      type="text"
-                      value={formData.company}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  {/* 電話番号（phone）※任意 */}
-                  <div data-aos="fade-up" data-aos-delay="500">
-                    <label
-                      className="block text-sm text-slate-800 font-medium mb-1"
-                      htmlFor="phone"
-                    >
-                      電話番号
-                    </label>
-                    <input
-                      id="phone"
-                      name="phone"
-                      className="form-input text-sm py-2 w-full rounded-lg"
-                      type="text"
-                      value={formData.phone}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  {/* メッセージ内容（message）※必須 */}
-                  <div data-aos="fade-up" data-aos-delay="550">
-                    <label
-                      className="block text-sm text-slate-800 font-medium mb-1"
-                      htmlFor="message"
-                    >
-                      メッセージ内容 <span className="text-rose-500">*</span>
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      className="form-textarea text-sm py-2 w-full rounded-lg"
-                      rows={4}
-                      required
-                      value={formData.message}
-                      onChange={handleChange}
-                    />
-                  </div>
-                </div>
-                <div className="mt-6" data-aos="fade-up" data-aos-delay="600">
-                  <button type="submit" className="btn-sm text-sm text-white bg-indigo-500 hover:bg-indigo-600 w-full shadow-sm group">
-                    送信する
-                  </button>
-                </div>
-              </form>
-              {submitted && (
-                <div className="mt-6 text-emerald-700 bg-emerald-50 border border-emerald-300 rounded p-4 text-sm text-center" data-aos="fade-up">
-                  送信が完了しました。担当者より折り返しご連絡いたします。
-                </div>
-              )}
-              {error && (
-                <div className="mt-6 text-rose-700 bg-rose-50 border border-rose-300 rounded p-4 text-sm text-center" data-aos="fade-up">
-                  {error}
-                </div>
-              )}
-            </div>
-          </div>
+          <ContactForm />
         </div>
       </div>
     </div>
