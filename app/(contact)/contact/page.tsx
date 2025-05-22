@@ -23,13 +23,13 @@ export default function ContactPage() {
       <div className="pt-32 pb-12 md:pt-40 md:pb-20">
         <div className="lg:flex lg:space-x-20 justify-center">
           {/* Left side */}
-          <div className="grow lg:mt-20 mb-12 lg:mb-0 flex flex-col items-center">
+          <div className="grow lg:mt-20 mb-12 lg:mb-0 flex flex-col items-start">
             {/* Headline */}
-            <h1 className="h2 font-sans mb-8 text-center" data-aos="fade-up">
+            <h1 className="h3 font-sans mb-8 text-left" data-aos="fade-up">
               お問い合わせ
             </h1>
             {/* List */}
-            <ul className="inline-flex flex-col text-lg text-slate-500 space-y-3 text-center">
+              <ul className="flex flex-col text-lg text-slate-500 space-y-3 items-start">
               <li className="flex items-center" data-aos="fade-up" data-aos-delay="100">
                 <svg
                   className="w-3 h-3 fill-current text-emerald-500 mr-3 shrink-0"

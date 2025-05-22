@@ -30,10 +30,10 @@ export default function Shops() {
     <section className="relative border-t border-slate-300">
       {/* Bg gradient: top */}
       <div
-        className="absolute top-0 left-0 right-0 bg-gradient-to-b from-indigo-700 to-transparent opacity-25 h-[25rem] pointer-events-none -z-10"
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-screen bg-gradient-to-b from-indigo-700 to-transparent opacity-25 h-[25rem] pointer-events-none -z-10"
         aria-hidden="true"
       />
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="w-full px-4 sm:px-6">
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
