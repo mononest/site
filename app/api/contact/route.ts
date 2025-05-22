@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
 export async function POST(req: Request) {
-  const resend = new Resend(process.env.RESEND_API_KEY); // ✅ 延迟实例化
+  const resend = new Resend(process.env.RESEND_API_KEY); 
   const body = await req.json();
   const { name, email, type, company, tel, message } = body;
 

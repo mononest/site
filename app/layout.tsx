@@ -24,7 +24,7 @@ export default function RootLayout({
       >
         {/* <body className={`${inter.variable} ${hkgrotesk.variable} font-inter antialiased bg-slate-100 text-gray-800 tracking-tight`}> */}
         {/* <body className="font-sans antialiased bg-slate-100 text-gray-800 tracking-tight"> */}
-        <div className="flex flex-col min-h-screen overflow-hidden">
+        <div className="flex flex-col min-h-screen overflow-hidden max-w-[100vw]">
           <script
             dangerouslySetInnerHTML={{
               __html: `

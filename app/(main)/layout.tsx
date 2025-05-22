@@ -29,7 +29,7 @@ export default function MainLayout({
     <>
       <Header />
       
-      <main className="grow">
+      <main className="grow max-w-[100vw] mx-auto">
 
         {/* Illustration */}
         <div className="hidden md:block absolute left-1/2 -translate-x-1/2 pointer-events-none -z-10" aria-hidden="true">

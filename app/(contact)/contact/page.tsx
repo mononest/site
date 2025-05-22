@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-export default function SignUp() {
+export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [formData, setFormData] = useState({
@@ -63,7 +63,7 @@ export default function SignUp() {
   };
 
   return (
-    <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+    <div className="relative max-w-6xl mx-auto px-4 sm:px-6" key={Date.now()}>
       <div className="pt-32 pb-12 md:pt-40 md:pb-20">
         <div className="lg:flex lg:space-x-20 justify-center">
           {/* Left side */}
@@ -110,7 +110,7 @@ export default function SignUp() {
           <div className="relative w-full max-w-md mx-auto">
             {/* Bg gradient */}
             <div
-              className="absolute inset-0 opacity-40 bg-gradient-to-t from-transparent to-slate-200 -z-10"
+              className="absolute inset-0 opacity-90 bg-gradient-to-br from-indigo-50 via-indigo-100 to-indigo-200 -z-10 rounded-xl"
               aria-hidden="true"
             />
             <div className="p-6 md:p-8">
@@ -129,7 +129,7 @@ export default function SignUp() {
                     <input
                       id="name"
                       name="name"
-                      className="form-input text-sm py-2 w-full"
+                      className="form-input text-sm py-2 w-full rounded-lg"
                       type="text"
                       required
                       value={formData.name}
@@ -147,7 +147,7 @@ export default function SignUp() {
                     <input
                       id="email"
                       name="email"
-                      className="form-input text-sm py-2 w-full"
+                      className="form-input text-sm py-2 w-full rounded-lg"
                       type="email"
                       required
                       value={formData.email}
@@ -188,7 +188,7 @@ export default function SignUp() {
                     <input
                       id="company"
                       name="company"
-                      className="form-input text-sm py-2 w-full"
+                      className="form-input text-sm py-2 w-full rounded-lg"
                       type="text"
                       value={formData.company}
                       onChange={handleChange}
@@ -205,7 +205,7 @@ export default function SignUp() {
                     <input
                       id="phone"
                       name="phone"
-                      className="form-input text-sm py-2 w-full"
+                      className="form-input text-sm py-2 w-full rounded-lg"
                       type="text"
                       value={formData.phone}
                       onChange={handleChange}
@@ -222,7 +222,7 @@ export default function SignUp() {
                     <textarea
                       id="message"
                       name="message"
-                      className="form-textarea text-sm py-2 w-full"
+                      className="form-textarea text-sm py-2 w-full rounded-lg"
                       rows={4}
                       required
                       value={formData.message}

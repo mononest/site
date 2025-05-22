@@ -16,10 +16,16 @@ export default function ContactLayout({
     <>
       <Header />
       
-      <main className="grow">
-        {/* Illustration */}
+      <main className="grow max-w-[100vw] mx-auto">
+        {/* 延迟加载插图 */}
         <div className="hidden md:block absolute left-1/2 -translate-x-1/2 pointer-events-none -z-10" aria-hidden="true">
-          <Image src={Illustration} className="max-w-none" priority alt="Hero Illustration" />
+          <Image 
+            src={Illustration} 
+            className="max-w-none" 
+            priority={false}
+            loading="lazy"
+            alt="Hero Illustration" 
+          />
         </div>
         {children}
       </main>
